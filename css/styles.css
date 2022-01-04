@@ -1,0 +1,225 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 474). 
+
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+/* Base styles */
+
+:root {
+	font-family: 'Montserrat', sans-serif !important;
+	font-size: 10px;
+	--grey-text: #828282;
+	--black-text: #111;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Montserrat', sans-serif !important;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif !important;
+	min-height: 100vh;
+	background-color: #242729 !important;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 138rem;
+	margin: 0 auto;
+	padding: 0 2vw;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: inherit;
+	background: none;
+	border: none;
+	color: inherit;
+	padding: 0;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+/* Channel navigation */
+
+.channel-nav {
+	background-color: #fafafa;
+	padding-bottom: 0.5rem;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+.channel-nav ul {
+	display: flex;
+}
+
+.nav-item a {
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--grey-text);
+	padding: 1.5rem 3.2rem;
+}
+
+.nav-item a.current {
+	color: var(--black-text);
+	border-bottom: 0.3rem solid #6e6e6e;
+}
+
+.nav-item a:hover {
+	color: var(--black-text);
+}
+
+
+
+/* Media queries */
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+.col { background: #ccc; padding:1em 0; text-align:center;}
+
+/* light shadow
+.card.hover-shadow:hover,
+.hover-shadow:hover {
+	box-shadow:5px 5px 5px 5px rgba(0,0,0,.21) !important;
+	transition:all .3s ease-in-out
+}
+*/
+
+/* piercing shadow
+.card.hover-shadow:hover,
+.hover-shadow:hover {
+	box-shadow:5px 5px 5px 5px rgba(0,0,0,.21) !important;
+	transition:all .3s ease-in-out
+} */
+
+.card.hover-shadow:hover, .hover-shadow:hover {
+	box-shadow: 0px 0px 25px #666565 !important;
+	transition: all .3s ease-in-out;
+}
+
+
+.zoomie:hover {
+	-ms-transform: scale(1.025); /* IE 9 */
+	-webkit-transform: scale(1.025); /* Safari 3-8 */
+	transform: scale(1.025); 
+	
+}
+
+.bgtheme {
+	background-color: rgb(36, 39, 41) !important;
+}
+
+footer{
+	margin-top: auto; 
+}
+
+.fa-twitter {
+	color: #b7b6b4;
+}
+
+.fa-twitter:hover {
+	color: #5CA8F3;
+}
+
+.fa-pencil-alt {
+	color: #b7b6b4;
+}
+
+.fa-pencil-alt:hover {
+	color: #eabd03;
+}
+
+.fa-envelope {
+	color: #b7b6b4;
+}
+
+.fa-envelope:hover {
+	color: #ffffff;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.active.focus, .btn.active.focus {
+	box-shadow: none;
+	outline: none;
+}
+
+.whitetext {
+	color: rgb(235, 235, 235) !important;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #1c9aef;
+}
+
+.texts {
+	color: rgb(235, 235, 235) !important;
+}
+
+.texts:hover {
+	color: #1c9aef !important;
+}
+
+.zoom {
+	transition: transform .2s; /* Animation */
+	margin: 0 auto;
+}
+
+.zoom:hover {
+	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.pics {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+.pics:hover {
+	filter: none;
+	-webkit-filter: grayscale(0);
+}
