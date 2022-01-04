@@ -135,8 +135,8 @@ a {
 } */
 
 .card.hover-shadow:hover, .hover-shadow:hover {
-	box-shadow: 0px 0px 25px #666565 !important;
-	transition: all .3s ease-in-out;
+	box-shadow: 0px 0px 20px #0c0c0c !important;
+	transition: all .5s ease-in-out;
 }
 
 
@@ -206,7 +206,7 @@ a:hover {
 }
 
 .zoom {
-	transition: transform .2s; /* Animation */
+	transition: transform .35s; /* Animation */
 	margin: 0 auto;
 }
 
