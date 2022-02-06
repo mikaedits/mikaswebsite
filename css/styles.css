@@ -227,3 +227,13 @@ a:hover {
 .navbar-nav {
 	flex-direction: row !important;
 }
+
+#twt:hover {
+	text-decoration: none;
+	color: white;
+}
+
+#disc:hover {
+	text-decoration: none;
+	color: white;
+}
