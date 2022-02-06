@@ -233,7 +233,10 @@ a:hover {
 	color: white;
 }
 
-#disc:hover {
-	text-decoration: none;
+.fa-discord {
+	color: #b7b6b4;
+}
+
+.fa-discord:hover {
 	color: white;
 }
